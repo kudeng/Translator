@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!--输入文本框-->
+    <EditText
+        android:id="@+id/input"
+        android:hint="area of input"
+        android:gravity="top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:minLines="6"
+        android:maxLines="6"
+        android:background="@android:drawable/edit_text"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <!--输出文本框-->
+    <EditText
+        android:id="@+id/output"
+        android:hint="area of output"
+        android:gravity="top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:minLines="6"
+        android:maxLines="6"
+        android:background="@android:drawable/edit_text"
+        app:layout_constraintTop_toBottomOf="@id/spinner_input"
+        android:layout_marginTop="20dp"/>
+
+    <View
+        android:id="@+id/button_box"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/output"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--按键，点击后获取EditText信息，翻译后输出至TextView中-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/button"
+        android:textColor="#ffffff"
+        app:layout_constraintLeft_toLeftOf="@id/button_box"
+        app:layout_constraintTop_toTopOf="@id/button_box"
+        android:onClick="onClickOfButton" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/button1"
+        android:textColor="#ffffff"
+        app:layout_constraintRight_toLeftOf="@id/button"
+        android:layout_marginRight="40dp"
+        app:layout_constraintTop_toTopOf="@id/button_box"
+        android:onClick="onClickOfButton1" />
+    <Button
+        android:id="@+id/star_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/star_button"
+        android:textColor="#ffffff"
+        app:layout_constraintRight_toLeftOf="@id/button1"
+        android:layout_marginRight="40dp"
+        app:layout_constraintTop_toTopOf="@id/button_box"
+        android:onClick="onClickOfList" />
+
+    <!--下拉选择框，用于选择翻译种类-->
+    <Spinner
+        android:id="@+id/spinner_input"
+        android:spinnerMode="dropdown"
+        android:entries="@array/languages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/text_input"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        android:layout_marginTop="20dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_output"
+        android:spinnerMode="dropdown"
+        android:entries="@array/languages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/text_output"
+        app:layout_constraintTop_toBottomOf="@id/input"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/text_input"
+        android:text="源语言"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/input"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:id="@+id/text_output"
+        android:text="目的语言"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/spinner_input"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/input"
+        android:layout_marginTop="25dp"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

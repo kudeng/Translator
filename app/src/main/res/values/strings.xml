@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="app_name">Translator</string>
+    <string name="title">Translate tool</string>
+    <string name="button">Translate</string>
+    <string name="button1">Clear</string>
+    <string name="star_button">StarList</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_wordlist">Wordlist</string>
+    <string name="star_list_view">StarView</string>
+</resources>
