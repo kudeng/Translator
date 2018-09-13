@@ -4,10 +4,12 @@ public class TranslateRequest {
     public String q;
     public String from = "EN";
     public String to = "zh-CHS";
-    public String appKey = "6ae9a902c38bf5ac";
+    /*此处填写在有道智云中申请的appKey*/
+    public String appKey = "";
     public String salt;
     public String sign;
-    public String key = "kvOHfRwJMOYde2Lks6oJn7IjOoOcd8Ri";
+    /*此处填写有道智云中获取的密钥*/
+    public String key = "";
     public String ext = "mp3";
     public String voice = "0";
 
